@@ -34,7 +34,7 @@
   
     
   
-  <meta name="description" content="Open data belongs to everyone; it empowers people to make informed decisions that are not clouded by misinformation, rumour and gossip. To be able to identify the underlying facts within data sets, it is crucial that individuals and communities possess the necessary skills.">
+  <meta name="description" content="Open data belongs to everyone; it empowers people to make informed decisions that are not clouded by misinformation, rumour and gossip.">
 
   
   <link rel="alternate" hreflang="en-us" href="/post/covid_uk/">
@@ -282,13 +282,13 @@
   <meta property="og:site_name" content="tanja&#39;s website">
   <meta property="og:url" content="/post/covid_uk/">
   <meta property="og:title" content="Covid UK: How to do it in R | tanja&#39;s website">
-  <meta property="og:description" content="Open data belongs to everyone; it empowers people to make informed decisions that are not clouded by misinformation, rumour and gossip. To be able to identify the underlying facts within data sets, it is crucial that individuals and communities possess the necessary skills."><meta property="og:image" content="/post/covid_uk/featured.jpg">
+  <meta property="og:description" content="Open data belongs to everyone; it empowers people to make informed decisions that are not clouded by misinformation, rumour and gossip."><meta property="og:image" content="/post/covid_uk/featured.jpg">
   <meta property="twitter:image" content="/post/covid_uk/featured.jpg"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-11-30T00:00:00&#43;00:00">
+      <meta property="article:published_time" content="2020-03-30T00:00:00&#43;00:00">
     
-    <meta property="article:modified_time" content="2020-11-30T00:00:00&#43;00:00">
+    <meta property="article:modified_time" content="2020-03-30T00:00:00&#43;00:00">
   
 
   
@@ -320,8 +320,8 @@
     "/post/covid_uk/featured.jpg"
   ],
   
-  "datePublished": "2020-11-30T00:00:00Z",
-  "dateModified": "2020-11-30T00:00:00Z",
+  "datePublished": "2020-03-30T00:00:00Z",
+  "dateModified": "2020-03-30T00:00:00Z",
   
   "author": {
     "@type": "Person",
@@ -336,7 +336,7 @@
       "url": "/images/icon_hu49c64d90cb835285427e87f5faf983c3_165971_192x192_fill_lanczos_center_2.png"
     }
   },
-  "description": "Open data belongs to everyone; it empowers people to make informed decisions that are not clouded by misinformation, rumour and gossip. To be able to identify the underlying facts within data sets, it is crucial that individuals and communities possess the necessary skills."
+  "description": "Open data belongs to everyone; it empowers people to make informed decisions that are not clouded by misinformation, rumour and gossip."
 }
 </script>
 
@@ -764,8 +764,8 @@
   
 
 
-<meta content="2020-11-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-<meta content="2020-11-30 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+<meta content="2020-03-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+<meta content="2020-03-30 00:00:00 &#43;0000 UTC" itemprop="dateModified">
 <div class="post-metadata">
   
   
@@ -775,7 +775,7 @@
     
       
     
-<time>Nov 30, 2020</time>
+<time>Mar 30, 2020</time>
 </span>
   
   
@@ -913,6 +913,7 @@
 
     <div class="article-style">
       
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 <script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
 <script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
 <link href="/rmarkdown-libs/leaflet/leaflet.css" rel="stylesheet" />
@@ -1077,11 +1078,11 @@ Experience has shown that for public health intervention to be successful govern
 &gt; 
 &gt; suppressMessages(GET(url2ecdc, write_disk(tf &lt;- tempfile(fileext = &quot;.xlsx&quot;))))</code></pre>
 <pre><code>## Response [https://www.ecdc.europa.eu/sites/default/files/documents/COVID-19-geographic-disbtribution-worldwide-2020-11-30.xlsx]
-##   Date: 2021-02-24 17:27
+##   Date: 2021-02-25 17:53
 ##   Status: 200
 ##   Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
 ##   Size: 3.41 MB
-## &lt;ON DISK&gt;  /var/folders/71/96w85flx3yl928r2hzpfwvd00000gp/T//RtmpN0XKYH/file66be7333587b.xlsx</code></pre>
+## &lt;ON DISK&gt;  /var/folders/71/96w85flx3yl928r2hzpfwvd00000gp/T//Rtmp9WGAjb/filee4916db407c.xlsx</code></pre>
 <pre class="r"><code>&gt; covid_world &lt;- read_excel(tf)</code></pre>
 <p>We will set up the database connection to work on <code>covid_world</code> data.</p>
 <pre class="r"><code>&gt; SQLcon &lt;- dbConnect(RSQLite::SQLite(), &quot;:memory:&quot;)
@@ -1519,7 +1520,7 @@ The following plot enables us to observe the change in the acceleration in relat
 &gt; 
 &gt; #used the st_read() function to import it
 &gt; bound &lt;- st_read(bound)</code></pre>
-<pre><code>## Reading layer `eu_countries_simplified&#39; from data source `/Users/Tanja1/Documents/My_R/mws/content/post/Covid_UK/shapes/eu_countries_simplified.shp&#39; using driver `ESRI Shapefile&#39;
+<pre><code>## Reading layer `eu_countries_simplified&#39; from data source `/Users/Tanja1/Documents/My_R/mws_git/content/post/Covid_UK/shapes/eu_countries_simplified.shp&#39; using driver `ESRI Shapefile&#39;
 ## replacing null geometries with empty geometries
 ## Simple feature collection with 54 features and 4 fields (with 4 geometries empty)
 ## geometry type:  GEOMETRY
